@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d484c405ee.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tema.css">
+    <title>Aprende.com</title>
+</head>
+<body>
+    <div class="topnav">
+      <a class="active" href="index.html"><i><i class="fa-solid fa-house"></i></i></a>
+      <a href="acercade.html">Acerca de</a>
+      </div>
+      
+    <div class="scrollmenu">
+        <a href="pagina2.html">Recursos</a>
+        ...
+    </div>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Recurso_uno')">Recurso 1</button>
+        <button class="tablinks" onclick="openCity(event, 'Recurso_dos')">Recurso 2</button>
+        <button class="tablinks" onclick="openCity(event, 'Recurso_tres')">Recurso 3</button>
+        <button class="tablinks" onclick="openCity(event, 'Video_uno')">Video 1</button>
+        <button class="tablinks" onclick="openCity(event, 'Video_dos')">Video 2</button>
+        <button class="tablinks" onclick="openCity(event, 'Ejercicios')">Ejercicios de práctica</button>
+      </div>
+
+      <div id="Recurso_uno" class="tabcontent">
+          <img src="https://conhecimentocientifico.com/wp-content/uploads/2020/06/teorema-de-pitagoras-o-que-e-definicao-caracteristicas-e-formula.jpg" alt="Teorema de pitágoras" class="image">
+          <div class="overlay">
+            <a href="https://www.todamateria.com/teorema-de-pitagoras/">
+              <div class="text">Información Teorema de Pitágoras</div>
+            </a>
+          </div>
+      </div>
+      
+      <div id="Recurso_dos" class="tabcontent" style="display:none";>
+        <img src="https://cdn-icons-png.flaticon.com/512/2106/2106544.png" alt="Teorema de pitágoras" class="image">
+        <div class="overlay">
+          <a href="https://economipedia.com/defindexnes/teorema-de-pitagoras.html">
+            <div class="text">Más Información del Teorema de Pitágoras</div>
+          </a>
+        </div>
+    </div>
+
+    <div id="Recurso_tres" class="tabcontent" style="display:none";>
+        <img src="https://www.teorema.top/wp-content/uploads/2019/11/Teorema-de-Pit%C3%A1goras.jpg" alt="Teorema de pitágoras" class="image">
+        <div class="overlay">
+          <a href="https://www.significados.com/teorema-de-pitagoras/">
+            <div class="text">Lectura (Otra por si acaso)</div>
+          </a>
+        </div>
+    </div>
+
+    <div id="Video_uno" class="tabcontent" style="display:none";>
+      <h3 class="text_content">Video</h3>
+      <iframe width="600px" height="400px"
+        src="https://www.youtube.com/embed/CJ8bpjhwA2k" class="video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+      
+    <div id="Video_dos" class="tabcontent" style="display:none";>
+      <h3 class="text_content">Video</h3>  
+      <iframe width="600px" height="400px" 
+        src="https://www.youtube.com/embed/2UbdPiqAiHY" class="video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+      </iframe>
+    </div>
+
+    <div id="Ejercicios" class="tabcontent" style="display:none";>
+      <h3 class="text_content">Ejercicio</h3>
+      <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Teorema de pitágoras" class="image">
+      <div class="overlay">
+        <a href="https://es.liveworksheets.com/worksheets/es/Matem%C3%A1ticas/Teorema_de_Pit%C3%A1goras/Pit%C3%A1goras_zo158500uh">
+          <div class="text">Pon en práctica lo que aprendiste</div>
+        </a>
+      </div>
+    </div>
+
+      <script>
+        function openCity(evt, contenido) {
+          // Declarar las variables
+          var i, tabcontent, tablinks;
+
+          // Get all elements with class="tabcontent" and hide them
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+
+          // Get all elements with class="tablinks" and remove the class "active"
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+              tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+
+          // Show the current tab, and add an "active" class to the link that opened the tab
+          document.getElementById(contenido).style.display = "block";
+          evt.currentTarget.className += "active";
+          }
+      </script>
+</body>
+</html>

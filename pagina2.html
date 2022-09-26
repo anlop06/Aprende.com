@@ -1,0 +1,139 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+        <!-- Librería de íconos -->
+        <script src="https://kit.fontawesome.com/d484c405ee.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="pagina2.css">
+        <link rel="stylesheet" href="pagina2.java">
+        <title>Pagina2</title>
+    </head>
+    
+  <div class="scrollmenu">
+      <a href=index.html><i><i class="fa-solid fa-house"></i></i></a>
+      <a href=acercade.html>Acerca de</a>
+      ...
+  </div>
+
+  <div class="imagen_mate">
+    <div class="imagen_texto">
+      <h2>Bienvenido a Aprende.com</h2>
+      <p>¡Diviértete aprendiendo matemáticas!</p>
+    </div>
+  </div>
+  
+    <body>
+        <h2>RECURSOS</h2>
+    <!-- Portfolio Gallery Grid -->
+    <div class="row">
+      <div class="column nature">
+        <a href="tema.html">
+          <div class="content">
+            <img src="https://img2.rtve.es/i/?w=1600&i=1386350163529.jpg" alt="Tema 1" style="width:100%">
+            <h4>Teorema de Pitágoras</h4>
+            <p>Establece que la suma de cada uno de los catetos elevados al cuadrado igual a la hipotenusa elevada al cuadrado.</p>
+          </div>
+        </a>
+      </div>
+      <div class="column nature">
+        <a href="tema_dos.html">
+        <div class="content">
+          <img src="https://gaceta.cch.unam.mx/sites/default/files/styles/imagen_articulos_1920x1080/public/2022-04/matematicas_22cf5007_1200x630.jpeg?h=ec041e41&itok=a6_nxxsW" alt="Lights" style="width:100%">
+          <h4>Razones Trigonométicas</h4>
+          <p>Son los enlaces que se pueden establecer, entre los lados de un triángulo que tiene un ángulo de 90º.</p>
+        </div>
+          </a>
+      </div>
+      <div class="column nature">
+        <a href="tema_tres.html">
+          <div class="content">
+            <img src="https://concepto.de/wp-content/uploads/2013/08/geometria-e1551991013554.jpg" alt="Nature" style="width:100%">
+            <h4>Ley de Senos</h4>
+            <p>Esta ley es usada para poder calcular tanto los lados como los ángulos de un triángulo oblicuángulo.</p>
+          </div>
+        </a>
+      </div>
+    
+      <div class="column cars">
+        <a href="tema_cuatro.html">
+          <div class="content">
+            <img src="https://www.neurochispas.com/wp-content/uploads/2021/05/triangulo-usado-para-derivar-la-ley-de-cosenos.png" alt="Car" style="width:100%">
+            <h4>Ley de Cosenos</h4>
+            <p> Es usada para encontrar las partes faltantes de un triángulo oblicuo cuando ya sea las medidas de dos lados y la medida del ángulo incluido o las longitudes de los tres lados son conocidas.</p>
+          </div>
+        </a>
+      </div>
+      <div class="column cars">
+        <a href="tema_cinco.html">
+          <div class="content">
+            <img src="https://image.jimcdn.com/app/cms/image/transf/dimension=1920x10000:format=jpg/path/sd67b1a043f6e96ce/image/ice8559550a40c93c/version/1588003998/image.jpg" alt="Car" style="width:100%">
+            <h4>Sistema de Ecuaciones: Método Gráfico</h4>
+            <p>Consiste en representar las ecuaciones del sistema en una gráfica y ver en qué punto se cortan.</p>
+          </div>
+        </a>
+      </div>
+      <div class="column cars">
+        <a href="tema_seis.html">
+          <div class="content">
+            <img src="https://blogs.unitec.mx/content/dam/blogs/imagenes/corp_samara/6-infalibles-trucos-para-estudiar-matematicas-1-compressor.png" alt="Car" style="width:100%">
+            <h4>Sistema de Ecuaciones: Método de Sustitución</h4>
+            <p>Consiste en aislar en una ecuación una de las dos incógnitas para sustituirla en la otra ecuación.</p>
+          </div>
+        </a>
+      </div>
+    
+    <!-- END GRID -->
+    </div>
+    <!-- Java -->
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
+    </body>
+    </html>
+    
